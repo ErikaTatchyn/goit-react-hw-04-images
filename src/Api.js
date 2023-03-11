@@ -6,7 +6,6 @@ const BASE_URL = 'https://pixabay.com/api/';
 export const fetchImages = (searchQuery, currentPage) => {
   const perPage = 12;
   const url = `${BASE_URL}?key=${API_KEY}&q=${searchQuery}&page=${currentPage}&per_page=${perPage}`;
-
   return axios
     .get(url)
     .then(response => {
