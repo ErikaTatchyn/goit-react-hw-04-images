@@ -20,7 +20,6 @@ function App() {
       fetchImages(searchQuery, currentPage)
         .then(response => {
           setImages(prevImages => [...prevImages, ...response.hits]);
-          setCurrentPage(prevPage => prevPage + 1);
           setTotalPages(Math.ceil(response.totalHits / 12));
         })
         .catch(error => setError(error))
