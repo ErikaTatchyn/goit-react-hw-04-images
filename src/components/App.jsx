@@ -42,7 +42,7 @@ function App() {
     setSelectedImage(null);
   };
 
-  const showLoadMore = currentPage <= totalPages && images.length > 0;
+  const showLoadMore = currentPage < totalPages && images.length > 0;
 
   return (
     <div>
